@@ -1,0 +1,19 @@
+.navbar, .navbar-inverse, .navbar-inverse>a {
+	color: #abc3c6;
+	background-color: #22555f;
+	background-image: url('dots.png');
+background-repeat: repeat-x;
+
+border-color: #22555f;
+border-radius: 0;
+}
+
+.navbar-brand{
+	color: #fff !important;
+	font-size: 2em;
+	letter-spacing: 0.07em;
+	font-family: Alegreya SC, Georgia;
+	font-weight: 700;
+	font-style: italic;
+
+}

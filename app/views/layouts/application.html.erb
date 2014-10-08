@@ -2,12 +2,46 @@
 <html>
 <head>
   <title>Flixter</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Alegreya+SC:400,700italic" %>
+     <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Lato:400,400italic,700" %>
+     <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Alegreya:400,700" %>
+
+  <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+      <%= link_to " Flixter", root_path, :class => 'navbar-brand' %>
+       
+    </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+<!-- <span class='glyphicon glyphicon-plus-sign'></span> -->
+
+
+        <li>link</li>
+       <li>link2</li>
+       <li>link3</li>
+
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <%= yield %>
 
 </body>
