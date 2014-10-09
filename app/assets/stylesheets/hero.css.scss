@@ -1,0 +1,29 @@
+// // colors
+// #22555f dk blue green
+// #385e88 dots
+
+.hero{
+
+	text-align: center;
+	padding: 2em;
+	  background: url('hero.jpg') no-repeat center center fixed;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  background-size: cover;
+	background-color:  #385e88;
+	height: 300px;
+}
+
+.hero h1, .hero h2,.hero h3,.hero h4{
+	color: #fdfbee;
+}
+
+.hero-over{
+	color: #fdfbee;
+	background:rgba(34, 85, 95, 0.5);
+	padding: 1em;
+	margin: 0 auto;
+	width: 50%;
+	
+}
