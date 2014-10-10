@@ -2,28 +2,13 @@
 // #22555f dk blue green
 // #385e88 dots
 
-//nest inside main style
-// // &:hover {
-//     color: #ff0;
-//   }
-// @extend scss!!!
-// .prominent {
-//   font-style: bold;
-//   font-size: 1.5rem;
-// }
- 
-// .important {
-//   color: #900;
-//   @extend .prominent;
-// }
- 
-// .notice {
-//   color: #090;
-//   @extend .prominent;
-// }
+
+
+
 
 *{
 	box-sizing: border-box;
+	border-radius: 0 !important;
 }
 
 html{
