@@ -2,21 +2,59 @@
 // #22555f dk blue green
 // #385e88 dots
 
+//nest inside main style
+// // &:hover {
+//     color: #ff0;
+//   }
+// @extend scss!!!
+// .prominent {
+//   font-style: bold;
+//   font-size: 1.5rem;
+// }
+ 
+// .important {
+//   color: #900;
+//   @extend .prominent;
+// }
+ 
+// .notice {
+//   color: #090;
+//   @extend .prominent;
+// }
+
 *{
 	box-sizing: border-box;
 }
 
 html{
 	font-size: 16px;
+	height: 100%;
 }
 body{
 	font-size: 100%;
 	font-family: Lato, sans-serif;
 	line-height: 1.8;
+	height: 100%;
 }
 h1, h2, h3, h4, h5{
 	font-family: Alegreya, Georgia, serif;
 	font-weight: 700;
 	color: #385e88;
 }
+#wrap {
+	$footer-height: 100px;
+  // min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -$footer-height;
+  // Pad bottom by footer height
+  // padding: 0 0 $footer-height;
+}
 
+
+.form-box{
+  background: rgba(253, 251, 238, .5);
+  margin-bottom: 0.75em;
+  padding: 2em;
+  border: 1px solid #fff;
+}

@@ -1,0 +1,21 @@
+// // colors
+// #22555f dk blue green
+// #385e88 dots
+
+$footer-height: 100px;
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: $footer-height;
+}
+
+#footer{
+	color:#fff;
+	background: #22555f;
+}
+
+
+
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5{
+	color: #fdfbee;
+}

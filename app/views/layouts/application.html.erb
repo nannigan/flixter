@@ -12,6 +12,7 @@
 
 </head>
 <body>
+  <div id='wrap'>
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,16 +34,26 @@
 <!-- <span class='glyphicon glyphicon-plus-sign'></span> -->
 
 
-        <li>link</li>
-       <li>link2</li>
-       <li>link3</li>
+        <li><%= link_to 'sign-up', new_user_registration_path %></li>
+       <li><%= link_to 'sign-in', new_user_session_path %></li>
+       <li><%= link_to 'sign-out', destroy_user_session_path %></li>
 
         
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<%= yield %>
 
+<%= yield %>
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+  </div> <!-- end wrap -->
+  <div id="footer">
+    <div class="container">
+      <h4>Teachers</h4>
+
+      <%= link_to 'Teach A Course', new_instructor_course_path %>
+    </div>
+  </div>
 </body>
 </html>
