@@ -1,9 +1,11 @@
 // // colors
 // #22555f dk blue green
-// #385e88 dots
-
-
-
+// #385e88 dots fb blue
+//#613888 dots purple
+// #47b5ca lt blue green
+//#ff8cc2 pink
+//#8e70b3 mauve
+//#96bde6 dots fb blu pale pale
 
 
 *{
@@ -21,11 +23,20 @@ body{
 	line-height: 1.8;
 	height: 100%;
 }
+a{
+	color: #47b5ca !important;
+}
 h1, h2, h3, h4, h5{
 	font-family: Alegreya, Georgia, serif;
 	font-weight: 700;
 	color: #385e88;
 }
+.label, .label-default{
+	background-color: #47b5ca;
+	padding: 1em;
+}
+
+
 #wrap {
 	$footer-height: 100px;
   // min-height: 100%;
@@ -42,4 +53,11 @@ h1, h2, h3, h4, h5{
   margin-bottom: 0.75em;
   padding: 2em;
   border: 1px solid #fff;
+}
+
+.notice, .alert{
+	padding: 20px;
+	display: block;
+	margin: 0 auto;
+	
 }

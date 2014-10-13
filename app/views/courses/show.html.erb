@@ -1,0 +1,22 @@
+<div class="form-box">
+      <h2 class="text-center"><%= @course.title %></h2>
+  <div class="col-sm-4 col-xs-12 text-center">
+
+    <span class='label label-default'><%= number_to_currency @course.cost %></span>
+   <p><br> <br><% if current_user && current_user == @course.user %>
+   
+         <%= link_to 'Course Admin', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
+       <% end %></p>
+    
+  </div>
+
+
+  <div class="col-sm-8 col-xs-12">
+    <%= @course.description %>
+  </div>
+   
+
+
+
+  
+</div>

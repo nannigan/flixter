@@ -1,7 +1,11 @@
 // // colors
 // #22555f dk blue green
-// #385e88 dots
-//#96bde6 dots pale pale
+// #385e88 dots fb blue
+//#613888 dots purple
+// #47b5ca lt blue green
+//#ff8cc2 pink
+//#8e70b3 mauve
+//#96bde6 dots fb blu pale pale
 .navbar, .navbar-inverse{
 	color: #fdfbee;
 	background-color: #22555f;
@@ -13,13 +17,14 @@ margin-bottom: 0;
 height: 100px;
 }
 
-.nav a,  .navbar-nav a, .navbar-right a, .collapse a, .navbar-collapse a{
-	color: #8ab2cd !important;
+.nav a,  .navbar-nav a, .navbar-right a, .collapse a, .navbar-collapse a, #footer a{
+	color: #47b5ca !important;
+	&:hover{
+		color: #fff;
+	}
 }
 
-.nav a:hover,  .navbar-nav a:hover, .navbar-right a:hover, .collapse a:hover, .navbar-collapse a:hover{
-	color: #fff !important;
-}
+
 .navbar-brand{
 	color: #fff !important;
 	font-size: 2em;
@@ -28,4 +33,21 @@ height: 100px;
 	font-weight: 700;
 	font-style: italic;
 
+}
+.btn, .btn-primary, .btn-large{
+	background-color: #613888;
+	border: none;
+	&:hover{
+		background-color: #22555f;
+	}
+	
+} 
+
+@media (max-width: 750px) {
+	.navbar-collapse .collapse .in, #bs-example-navbar-collapse-1{
+	margin-top: 10px;
+	border-top: none;
+	background-color: #fff;
+	 & a:hover{color: #4655b5;}
+	}
 }
