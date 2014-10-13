@@ -35,6 +35,7 @@ height: 100px;
 
 }
 .btn, .btn-primary, .btn-large{
+	color: #fff;
 	background-color: #613888;
 	border: none;
 	&:hover{
@@ -42,6 +43,8 @@ height: 100px;
 	}
 	
 } 
+
+
 
 @media (max-width: 750px) {
 	.navbar-collapse .collapse .in, #bs-example-navbar-collapse-1{
