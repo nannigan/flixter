@@ -3,6 +3,7 @@
  <%= simple_form_for @course, :url => instructor_courses_path do |f| %>
     <p><%= f.input :title %></p>
     <p><%= f.input :description %></p>
+    <p><%= f.input :image %></p>
     <p><%= f.input :cost %></p>
 
    <p> <%= f.submit "Create", :class => 'btn btn-primary' %></p>

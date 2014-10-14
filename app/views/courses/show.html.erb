@@ -1,5 +1,6 @@
 <div class="form-box">
       <h2 class="text-center"><%= @course.title %></h2>
+      <%= image_tag @course.image, :class=> 'img-responsive' %>
   <div class="col-sm-4 col-xs-12 text-center">
 
     <span class='label label-default'><%= number_to_currency @course.cost %></span>
