@@ -1,7 +1,7 @@
 <div class='form-box'>
 <h2>Add a New Section for this Class</h2>
 
-  <%= simple_form_for @section, :class =>'form-group', :url => instructor_course_sections_path(@course) do |f| %>
+  <%= simple_form_for @section, :class =>'form-group', :url => instructor_course_sections_path(current_course) do |f| %>
     <%= f.input :title, :class =>'form-control'%>
     <%= f.submit "Add a section", :class =>'btn' %>
   <% end %>
