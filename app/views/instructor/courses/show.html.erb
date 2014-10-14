@@ -1,6 +1,7 @@
 <div class ='form-box'>
 	<div class="text-center">
-<h3><%= @course.title%></h3>	
+    <h2>Instructor Admin View</h2>
+<h3><%= current_course.title%></h3>	
  
     <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %></p>
    <p> <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>

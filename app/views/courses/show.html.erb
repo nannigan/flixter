@@ -5,7 +5,7 @@
     <span class='label label-default'><%= number_to_currency @course.cost %></span>
    <p><br> <br><% if current_user && current_user == @course.user %>
    
-         <%= link_to 'Course Admin', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
+         <%= link_to 'Teacher Admin', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
        <% end %></p>
     
   </div>
@@ -15,7 +15,19 @@
     <%= @course.description %>
   </div>
    
-
+    <% @course.sections.each do |section| %>
+      <div class="section">
+        <%= section.title %>
+                <% section.lessons.each do |lesson| %>
+          <div class="lesson">
+              <%= link_to lesson_path(lesson) do %>
+            <h4><%= lesson.title %>: </h4>
+            <em> <%= lesson.subtitle %></em>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
 
 
   
