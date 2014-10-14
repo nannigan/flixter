@@ -1,6 +1,7 @@
 class Course < ActiveRecord::Base
 	  belongs_to :user
 	  has_many :sections
+	  #that have lessons so not here
 
 	validates :title, :presence => true
 	validates :description, :presence => true

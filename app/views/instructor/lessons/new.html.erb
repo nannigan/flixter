@@ -1,0 +1,10 @@
+<div class='form-box'>
+<h2>Add a New Lesson to this Section</h2>
+
+  <%= simple_form_for @lesson, :class =>'form-group', :url => instructor_section_lessons_path(@section) do |f| %>
+    <%= f.input :title,  :class =>'form-control' %>
+    <%= f.input :subtitle,  :class =>'form-control'%>
+    <%= f.submit "Add the lesson" , :class=> 'btn' %>
+  <% end %>
+
+</div>

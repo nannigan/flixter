@@ -9,11 +9,20 @@ Flixter::Application.routes.draw do
   # student courses route
   resources :courses, :only => [:index, :show]
 
+  # namespace :instructor do
+  #   resources :courses, :only => [:new, :create, :show] do
+  #     resources :sections, :only => [:new, :create] do
+  #       resources :lessons, :only => [:new, :create]
+  #     end
+  #   end
   namespace :instructor do
+    resources :sections, :only => [] do  #not pass the course id here
+      # in url
+      resources :lessons, :only => [:new, :create] 
+    end
     resources :courses, :only => [:new, :create, :show] do
       resources :sections, :only => [:new, :create]
     end
-
   end
 
 
