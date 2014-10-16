@@ -8,51 +8,83 @@
 //#96bde6 dots fb blu pale pale
 
 
+
 *{
 	box-sizing: border-box;
 	border-radius: 0 !important;
 }
 
 html{
+	  position: relative;
+  min-height: 100%;
 	font-size: 16px;
-	height: 100%;
+
 }
 body{
 	font-size: 100%;
 	font-family: Lato, sans-serif;
 	line-height: 1.8;
-	height: 100%;
+  margin-bottom: 100px;
 }
 a{
 	color: #47b5ca !important;
 }
-h1, h2, h3, h4, h5{
-	font-family: Alegreya, Georgia, serif;
-	font-weight: 700;
-	color: #385e88;
+blockquote{
+	border-left: none !important;
 }
+
+h1, h2, h3, h4, h5{
+	font-family: Alegreya SC, Georgia, serif;
+	font-weight: 400;
+	color: #385e88;
+	text-transform: lowercase;
+	padding:0;
+	margin: 0;
+}
+h1 {
+	border-bottom: 1px solid #613888;
+	line-height: .8;
+	margin-bottom: 20px;
+}
+h2{
+ padding-left:10px;
+	border-left: 3px double #613888;
+	margin:10px;
+}
+
+
+
+.header-section{
+	@extend h3;
+}
+
 .label, .label-default{
 	background-color: #47b5ca;
 	padding: 1em;
 }
 
 
-#wrap {
-	$footer-height: 100px;
-  // min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -$footer-height;
-  // Pad bottom by footer height
-  // padding: 0 0 $footer-height;
-}
+// #wrap {
+// 	display:block;
+
+//   // min-height: 100%;
+//   //height: auto;
+//   Negative indent footer by its height
+// padding: 0 auto 40px;
+//   // Pad bottom by footer height
+//   // padding: 0 0 $footer-height;
+// }
 
 
 .form-box{
+	display: block;
+	height: 100%;
+	width: 85%;
   background: rgba(253, 251, 238, .5);
-  margin-bottom: 0.75em;
-  padding: 2em;
-  border: 1px solid #fff;
+  margin: 0 auto 0.75em auto;
+  padding: 0 2em 2em 2em;
+  border: 1px dotted #47b5ca;
+  border-top: none;
 }
 
 .notice, .alert{

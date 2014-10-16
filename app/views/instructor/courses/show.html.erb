@@ -1,16 +1,17 @@
 <div class ='form-box'>
-	<div class="text-center">
-    <h2>Instructor Admin View</h2>
-<h3><%= current_course.title%></h3>	
+<div class= 'row'>  
+  <div class="text-center">
+    <h1>Instructor Admin View</h1>
+<h2><%= current_course.title%></h2>  
  
     <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %></p>
    <p> <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
 
    <ul class='list-unstyled'> <% current_course.sections.each do |section| %> 
-		   	<li > 
-		   	<%= section.title %> 
-		   	<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>
-		   	 <ul class='list-unstyled'>
+         <li > 
+         <h3><%= section.title %>:  </h3> 
+         <%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>
+          <ul class='list-unstyled'>
           <% section.lessons.each do |lesson| %>
             <li>
               <h4><%= lesson.title %></h4>
@@ -19,10 +20,11 @@
             </li>
           <% end %>
         </ul>
-		   </li> 
-   	<% end %> 
+       </li> 
+     <% end %> 
    </ul>
   </div>
+</div>
 
 
 </div> 

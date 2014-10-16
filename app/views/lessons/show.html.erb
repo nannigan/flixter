@@ -1,8 +1,18 @@
 <div class="form-box">
       <h2 class="text-center">Lesson Show page</h2>
-  <h1><%= current_lesson.title %></h1>
+  <h3><%= current_lesson.title %></h3>
   <p>
     <%= current_lesson.subtitle %>
+
+    <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered"
+  controls preload="auto" width="640" height="264"
+  poster="/assets/flowerVidPoster.jpg"
+  data-setup='{}'>
+ 
+ <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
+
+</video>
+
   </p>
 
 

@@ -1,14 +1,17 @@
 <div class="form-box">
-  <h1 class="text-center">Learn something today</h1>
-  <hr />
-    <% @courses.each do |course| %>
-    <h2 class="text-center"> <%= link_to course.title ,course_path(course) %></h2>
-
-    <div class="col-sm-8 col-xs-12">
-      <%= course.description %>
-    </div>
-    <div class="col-sm-4 col-xs-12 text-center">
-      <%= link_to 'Course Details',course_path(course), :class => 'btn btn-primary btn-large' %>
-    </div>
-  <% end %>
+  <div class='row'>  
+    <h1 class="text-center">Learn something new today</h1>
+      <% @courses.each do |course| %>
+     
+      <div class="col-sm-10 col-xs-12">
+         <h2><%= link_to course.title ,course_path(course) %></h2>
+        <blockquote><%= course.description %></blockquote>
+         <hr>
+      </div>
+      <div class="col-sm-2 col-xs-12">
+        <%= link_to 'Course Details',course_path(course), :class => 'btn btn-primary btn-large' %>
+      
+      </div>
+    <% end %>
+  </div>
 </div>

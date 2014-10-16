@@ -8,11 +8,17 @@
      <%= stylesheet_link_tag    "application", "http://fonts.googleapis.com/css?family=Alegreya:400,700" %>
 
   <%= javascript_include_tag "application"%>
-  <%= csrf_meta_tags %>
 
+  <link href="//vjs.zencdn.net/4.9/video-js.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/4.9/video.js"></script>
+  <%= csrf_meta_tags %>
+  <style>
+    .video-js {padding-top: 56.25%}
+    .vjs-fullscreen {padding-top: 0px}
+  </style>
 </head>
 <body>
-  <div id='wrap'>
+<!-- <div id='wrap'> -->
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,7 +60,7 @@
 <%= yield %>
 <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
-  </div> <!-- end wrap -->
+<!-- </div> --> <!-- end wrap  don't need it see BS example of sticky footert-->
   <div id="footer">
     <div class="container">
       <h4>Teachers</h4>
@@ -62,5 +68,6 @@
       <%= link_to 'Teach A Course', new_instructor_course_path %>
     </div>
   </div>
+
 </body>
 </html>

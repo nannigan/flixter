@@ -4,15 +4,21 @@
 
 $footer-height: 100px;
 
+
+
+
+
 /* Set the fixed height of the footer here */
 #footer {
-  height: $footer-height;
-}
-
-#footer{
 	color:#fff;
 	background: #22555f;
+  height: $footer-height;
+  position: absolute;
+  bottom: 0;
+  width:100%
 }
+
+
 
 
 

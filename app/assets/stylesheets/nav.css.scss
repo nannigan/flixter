@@ -14,7 +14,7 @@ background-repeat: repeat-x;
 border-color: #22555f;
 border-radius: 0;
 margin-bottom: 0;
-height: 100px;
+height: 60px;
 }
 
 .nav a,  .navbar-nav a, .navbar-right a, .collapse a, .navbar-collapse a, #footer a{
@@ -26,15 +26,17 @@ height: 100px;
 
 
 .navbar-brand{
-	color: #fff !important;
+	color: #fdfbee !important;
 	font-size: 2em;
 	letter-spacing: 0.07em;
 	font-family: Alegreya SC, Georgia;
 	font-weight: 700;
 	font-style: italic;
+	text-shadow: 1px 1px 1px #666;
 
 }
 .btn, .btn-primary, .btn-large{
+	margin-top: 10px;
 	color: #fff;
 	background-color: #613888;
 	border: none;
