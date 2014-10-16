@@ -1,3 +1,19 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.course-photo{
+	display: block;
+	width: 100%;
+	height: inherit;
+	margin: 10 auto !important;
+}
+
+.course-l-col{
+	padding:20px;
+}
+
+div.course-r-col{
+	padding: 10px;
+	border-left: 3px double #613888;
+}
+

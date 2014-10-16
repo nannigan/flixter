@@ -1,14 +1,15 @@
 <div class ='form-box'>
 <div class= 'row'>  
-  <div class="text-center">
-    <h1>Instructor Admin View</h1>
-<h2><%= current_course.title%></h2>  
+<!--   <div > -->
+    <h1 class="text-center">Instructor Admin View</h1>
+<h2>&para; <%= current_course.title%></h2>  
  
-    <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %></p>
-   <p> <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
+    <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %>&nbsp;&nbsp;&nbsp;
+  <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
 
    <ul class='list-unstyled'> <% current_course.sections.each do |section| %> 
          <li > 
+            <hr>
          <h3><%= section.title %>:  </h3> 
          <%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>
           <ul class='list-unstyled'>
@@ -23,7 +24,8 @@
        </li> 
      <% end %> 
    </ul>
-  </div>
+
+ <!--  </div> -->
 </div>
 
 

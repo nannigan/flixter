@@ -1,33 +1,43 @@
 <div class="form-box">
-      <h2><%= @course.title %></h2>
+ <div class='row'> 
+  <div class="col-xs-12">
+     <h2> &para; <%= @course.title %></h2>
+       <div><%= image_tag @course.image, :class=> 'img-responsive course-photo' %>
+       </div>
+       <p class='text-center'><%= @course.description %></p>
+   </div>
 
-<div class = 'row'>  
-  <div class="col-sm-2 col-xs-12 text-center ">
+ </div>
+   <hr>
+<div class = 'row '>  
+  <div class="col-sm-2 col-xs-12 course-l-col text-center">
 
-    <span class='label label-default'><%= number_to_currency @course.cost %></span>
-   <p><br> <br><% if current_user && current_user == @course.user %>
-   
-         <%= link_to 'Teacher Admin', instructor_course_path(@course), :class => 'btn btn-danger btn-large' %>
+   <p><h4>Cost:</h4> <span class='label label-default'><%= number_to_currency @course.cost %></span></p>
+   <hr>
+   <p class='small'><% if current_user && current_user == @course.user %>
+      <%= link_to 'Teacher Admin', instructor_course_path(@course) %>
        <% end %></p>
     
   </div>
 
 
-  <div class="col-sm-10col-xs-12">
-    <%= @course.description %>
-     <%= image_tag @course.image, :class=> 'img-responsive' %>
+  <div class="col-sm-10 col-xs-12 course-r-col">
+
+    
 
          <% @course.sections.each do |section| %>
-      <div class="section">
+      <div class="section text-center">
         <h3><%= section.title %>:  </h3> 
                 <% section.lessons.each do |lesson| %>
-          <div class="lesson">
+      <div class="col-xs-12 col-sm-6">
+          <div class="lesson text-center">
               <%= link_to lesson_path(lesson) do %>
             <h4><%= lesson.title %>: </h4>
             <em> <%= lesson.subtitle %></em>
             <% end %>
           </div>
-        <% end %>
+      </div>
+       <% end %>
       </div>
     <% end %>
   </div>

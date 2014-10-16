@@ -1,3 +1,17 @@
 // Place all the styles related to the lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.section{
+	background: #fdfbee;
+	padding: 20px;
+}
+
+.lesson {
+	background: #47b5ca;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+.lesson a, .lesson h4{
+		color: #fdfbee !important;
+		}
