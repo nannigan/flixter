@@ -56,10 +56,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<% if notice.present? %>
+<span class="notice"><%= notice %></span>
+<%end%>
+<% if alert.present? %>
+<span class="alert"><%= alert %></span>
+<%end%>
 <%= yield %>
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+
 <!-- </div> --> <!-- end wrap  don't need it see BS example of sticky footert-->
   <div id="footer">
     <div class="container">

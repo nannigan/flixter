@@ -2,7 +2,7 @@
 <div class= 'row'>  
 <!--   <div > -->
     <h1 class="text-center">Instructor Admin View</h1>
-<h2>&para; <%= current_course.title%></h2>  
+<h2>&para;  &sect;<%= current_course.title%></h2>  
  
     <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %>&nbsp;&nbsp;&nbsp;
   <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
