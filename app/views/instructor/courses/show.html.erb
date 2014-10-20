@@ -2,28 +2,29 @@
 <div class= 'row'>  
 <!--   <div > -->
     <h1 class="text-center">Instructor Admin View</h1>
-<h2>&para;  &sect;<%= current_course.title%></h2>  
+<h2>&para;<%= current_course.title%></h2>  
  
     <p><%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), :class => 'btn' %>&nbsp;&nbsp;&nbsp;
   <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
 
-   <ul class='list-unstyled'> <% current_course.sections.each do |section| %> 
-         <li > 
-            <hr>
-         <h3><%= section.title %>:  </h3> 
-         <%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>
-          <ul class='list-unstyled'>
-          <% section.lessons.each do |lesson| %>
-            <li>
+  <div class="col-xs-12">
+    <% current_course.sections.each do |section| %> 
+           
+      <div class="section text-center">
+        
+         <h3>&sect;<%= section.title %>: &nbsp;&nbsp;&nbsp;<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>  </h3> 
+          <% section.lessons.rank(:row_order).each do |lesson| %>
+          <div class="col-xs-12 col-sm-6">
+            <div class="lesson text-center">
               <h4><%= lesson.title %></h4>
-            
               <em><%= lesson.subtitle %></em>
-            </li>
+            </div>
+          </div> 
           <% end %>
-        </ul>
-       </li> 
+       </div>
+       <hr>
      <% end %> 
-   </ul>
+   </div>
 
  <!--  </div> -->
 </div>
