@@ -1,3 +1,20 @@
+<script>
+  $(function() {
+
+    $('.lessons').sortable({
+      update: function(event,ui){ 
+      $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order_position: ui.item.index() } }
+        });
+
+        //alert("Item id: " + ui.item.data('item-id') + "Index: " + ui.item.index());
+      }
+    });
+  })
+</script>
 <div class ='form-box'>
 <div class= 'row'>  
 <!--   <div > -->
@@ -13,16 +30,20 @@
       <div class="section text-center">
         
          <h3>&sect;<%= section.title %>: &nbsp;&nbsp;&nbsp;<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>  </h3> 
-          <% section.lessons.rank(:row_order).each do |lesson| %>
-          <div class="col-xs-12 col-sm-6">
-            <div class="lesson text-center">
-              <h4><%= lesson.title %></h4>
-              <em><%= lesson.subtitle %></em>
-            </div>
-          </div> 
-          <% end %>
-       </div>
-       <hr>
+
+        <ul class="lessons list-unstyled">
+           <% section.lessons.rank(:row_order).each do |lesson| %>
+       
+             <li  data-update-url="<%= instructor_lesson_path(lesson) %>"  class="lesson text-center">
+               <h4><%= lesson.title %></h4>
+               <em><%= lesson.subtitle %></em>
+             </li>
+        
+           <% end %>
+         </ul>
+
+      </div>
+      
      <% end %> 
    </div>
 

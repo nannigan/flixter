@@ -11,7 +11,7 @@ class Instructor::SectionsController < ApplicationController
 	end
 
   private
-    def require_authorized_for_current_course
+  def require_authorized_for_current_course
     if current_course.user != current_user
       render :text => "Unauthorized", :status => :unauthorized
     end
@@ -23,6 +23,6 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def section_params
-    params.require(:section).permit(:title)
+    params.require(:section).permit(:title, :row_order_position)
   end
 end
