@@ -41,13 +41,15 @@
            
       <li data-update-url="<%= instructor_section_path(section) %>" class="section text-center">
         
-         <h3>&sect;<%= section.title %>: &nbsp;&nbsp;&nbsp;<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>  </h3> 
+        
+         <h3><span class='glyphicon glyphicon-sort'></span>&nbsp;&nbsp;&nbsp;&sect;<%= section.title %>: &nbsp;&nbsp;&nbsp;<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>  </h3> 
 
         <ul class="lessons list-unstyled">
            <% section.lessons.rank(:row_order).each do |lesson| %>
        
              <li  data-update-url="<%= instructor_lesson_path(lesson) %>"  class="lesson text-center">
-               <h4><%= lesson.title %></h4>
+              
+               <h4><span class='glyphicon glyphicon-sort'></span>&nbsp;&nbsp;&nbsp;&sect;<%= lesson.title %></h4>
                <em><%= lesson.subtitle %></em>
              </li>
         
