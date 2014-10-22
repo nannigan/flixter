@@ -9,10 +9,21 @@
           dataType: 'json',
           data: { lesson: { row_order_position: ui.item.index() } }
         });
-
         //alert("Item id: " + ui.item.data('item-id') + "Index: " + ui.item.index());
       }
     });
+
+    $('.sections').sortable({
+      update: function(event,ui){ 
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
+    });
+
   })
 </script>
 <div class ='form-box'>
@@ -25,9 +36,10 @@
   <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn' %></p>
 
   <div class="col-xs-12">
-    <% current_course.sections.each do |section| %> 
+    <ul class="sections list-unstyled">
+    <% current_course.sections.rank(:row_order).each do |section| %> 
            
-      <div class="section text-center">
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section text-center">
         
          <h3>&sect;<%= section.title %>: &nbsp;&nbsp;&nbsp;<%= link_to ' Add New Lesson', new_instructor_section_lesson_path(section) %>  </h3> 
 
@@ -42,9 +54,10 @@
            <% end %>
          </ul>
 
-      </div>
+      </li>
       
      <% end %> 
+     </ul>
    </div>
 
  <!--  </div> -->

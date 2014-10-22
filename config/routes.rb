@@ -14,7 +14,8 @@ Flixter::Application.routes.draw do
   resources :lessons, :only =>[:show]
 
   namespace :instructor do
-    resources :lessons, :only => [:update] # so we can update viewed order with .sortable
+    resources :lessons, :only => [:update]
+    resources :sections, :only => [:update]# so we can update viewed order with .sortable
     resources :sections, :only => [] do  #not pass the course id here
       # in url
       resources :lessons, :only => [:new, :create] 
