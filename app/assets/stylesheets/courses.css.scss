@@ -17,3 +17,7 @@ div.course-r-col{
 	border-left: 3px double #613888;
 }
 
+.instructor-sections-container{
+	 @extend .col-xs-12;
+	 padding:0;
+}

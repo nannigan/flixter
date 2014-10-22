@@ -43,7 +43,8 @@ h1, h2, h3, h4, h5, h6{
 	margin: 0;
 }
 h1 {
-	border-bottom: 1px solid #613888;
+	//border-top: 1px dotted #613888;
+	border-bottom: 1px dotted #47b5ca;
 	line-height: .8;
 	margin-bottom: 20px;
 }
@@ -72,7 +73,7 @@ h2{
 	width: 85%;
   background: rgba(253, 251, 238, .5);
   margin: 0 auto 0.75em auto;
-  padding: 0 2em 2em 2em;
+  padding: 0 1em 1em 1em;
   border: 1px dotted #47b5ca;
   border-top: none;
 }

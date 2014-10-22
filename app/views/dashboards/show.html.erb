@@ -1,0 +1,13 @@
+<div class="form-box">
+<div class='row'>
+  <h1>My Dashboard</h1>
+ <h2> Classes I'm Taking</h2>
+ <p>  
+  <% current_user.enrolled_courses.each do |course| %>
+     <h3 class="text-center"><%= course.title %></h3>
+   <% end %> 
+ </p>
+
+
+  </div>
+</div>
