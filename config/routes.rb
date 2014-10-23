@@ -19,11 +19,11 @@ Flixter::Application.routes.draw do
     resources :sections, :only => [:update]# so we can update viewed order with .sortable
     resources :sections, :only => [] do  #not pass the course id here
       # in url
-      resources :lessons, :only => [:new, :create] 
+      resources :lessons, :only => [:create] 
     end
 
     resources :courses, :only => [:new, :create, :show] do
-    resources :sections, :only => [:new, :create]
+    resources :sections, :only => [:create]
     end
   end#instructor ns
 
