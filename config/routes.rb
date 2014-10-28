@@ -3,10 +3,14 @@ Flixter::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # resources sets up CRUD actions, RESTful
   # See how all your routes lay out with "rake routes".
-  resource :dashboard, :only =>[:show]
+
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
   
+  get 'privacy', :to => 'static_pages#privacy'
+  get 'team', :to => 'static_pages#team'
+
+    resource :dashboard, :only =>[:show]
   # student courses route
   resources :courses, :only => [:index, :show] do
     resources :enrollments, :only => :create

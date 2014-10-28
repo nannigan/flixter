@@ -2,26 +2,38 @@
 // #22555f dk blue green
 // #385e88 dots
 
-$footer-height: 100px;
+$footer-height: 120px;
 
-
-
-
-
-/* Set the fixed height of the footer here */
 #footer {
 	color:#fff;
 	background: #22555f;
   height: $footer-height;
   position: absolute;
   bottom: 0;
-  width:100%
+  width: 100%;
+  padding-top: 1em;
 }
-
-
-
-
 
 #footer h1, #footer h2, #footer h3, #footer h4, #footer h5{
 	color: #fdfbee;
+  margin-bottom: 0.25em;
+}
+
+#footer p{
+	font-size: 80%;
+	line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+	body {
+  margin-bottom: 320px;
+	}
+  #footer {
+    height: 300px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 1em;
+  }
 }

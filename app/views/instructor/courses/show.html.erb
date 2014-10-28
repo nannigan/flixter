@@ -105,8 +105,8 @@
         <h4 class="modal-title" id="newLessonModalLabel">Add a New Lesson for this Section</h4>
       </div>
       <div class="modal-body">
- 
-
+        
+ instructor_section_lessons_path(section)
   <%= simple_form_for @lesson,:html => {:id => 'newLessonForm' }, :url => "#" do |f| %>
     <%= f.input :title,  :class =>'form-control' %>
     <%= f.input :subtitle,  :class =>'form-control'%>

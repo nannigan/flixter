@@ -1,5 +1,6 @@
-<div class="form-box">
+<div class='form-box'>
   <div class='row'>
+    <div class='col-sm-12'>
     <h1>My Dashboard</h1>
      <h2> Classes I'm Taking</h2>
        <p>  
@@ -13,8 +14,10 @@
             <hr>
          <% end %> 
        </p>
+       </div>
   </div>
-   <div class='row'> 
+   <div class='row'>
+    <div class='col-sm-12'>
     <h2>Classes I'm Teaching</h2>
      <% current_user.courses.each do |course| %>
        <h3 class="text-center">
@@ -27,4 +30,5 @@
    <hr>
      <% end %>
    </div>
+ </div>
 </div>

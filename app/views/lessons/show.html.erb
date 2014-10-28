@@ -1,6 +1,14 @@
 <div class="form-box">
+  <div class='row'>
+    <div class='col-sm-12'>
       <h2 class="text-center">Lesson Show page</h2>
   <h3><%= current_lesson.title %></h3>
+   <p> <% if current_lesson.next_lesson.present? %>
+       <%= link_to lesson_path(current_lesson.next_lesson), :class => 'btn  pull-right' do %> 
+       Next Lesson <span class='alegreya'>&nbsp;>></span>
+       <% end %>
+     <% end %>
+   </p>
   <p>
     <%= current_lesson.subtitle %>
 
@@ -15,7 +23,8 @@
 
   </p>
 
-
+</div>
+</div>
 
   
 </div>

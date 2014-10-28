@@ -2,7 +2,8 @@
 // #22555f dk blue green
 // #385e88 dots fb blue
 //#613888 dots purple
-// #47b5ca lt blue green
+// #47b5ca lt blue green aka turq
+//#d5ecdf very light blu grn
 //#ff8cc2 pink
 //#8e70b3 mauve
 //#96bde6 dots fb blu pale pale
@@ -24,7 +25,7 @@ body{
 	font-size: 100%;
 	font-family: Lato, sans-serif;
 	line-height: 1.8;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 a{
 	color: #47b5ca !important;
@@ -44,9 +45,11 @@ h1, h2, h3, h4, h5, h6{
 }
 h1 {
 	//border-top: 1px dotted #613888;
-	border-bottom: 1px dotted #47b5ca;
-	line-height: .8;
+	border-bottom: 1px dotted #d5ecdf;
+	padding-top: 0.8em;
+	line-height: .7;
 	margin-bottom: 20px;
+	font-style: italic;
 }
 
 // todo add &para; entity before
@@ -55,7 +58,9 @@ h2{
 	margin:10px;
 }
 
-
+.alegreya{
+	font-family: Alegreya SC, Georgia, serif;
+}
 
 
 .label, .label-default{
@@ -92,4 +97,8 @@ h2{
 	display: block;
 	background: rgba(255, 255, 255, .65);
 	margin: 0 100px;
+}
+
+.pull-right{
+	margin-right: 1em;
 }

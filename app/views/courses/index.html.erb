@@ -3,13 +3,14 @@
     <h1 class="text-center">Learn something new today</h1>
       <% @courses.each do |course| %>
      
-      <div class="col-sm-10 col-xs-12">
+      <div class="col-sm-12">
+        <%= link_to 'Course Details',course_path(course), :class => 'btn btn-primary btn-large pull-right' %>
          <h2>&para;  <%= link_to course.title ,course_path(course) %></h2>
         <blockquote><%= course.description %></blockquote>
          <hr>
-      </div>
-      <div class="col-sm-2 col-xs-12">
-        <%= link_to 'Course Details',course_path(course), :class => 'btn btn-primary btn-large' %>
+    <!--   </div>
+      <div class="col-sm-2 col-xs-12"> -->
+        
       
       </div>
     <% end %>

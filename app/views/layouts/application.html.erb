@@ -58,9 +58,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<% if notice.present? %>
-<span class="notice"><%= notice %></span>
-<%end%>
+
+<!-- <span class="notice"><%= notice %></span> -->
+
 <% if alert.present? %>
 <span class="alert"><%= alert %></span>
 <%end%>
@@ -69,9 +69,42 @@
 <!-- </div> --> <!-- end wrap  don't need it see BS example of sticky footert-->
   <div id="footer">
     <div class="container">
-      <h4>Teachers</h4>
+      <div calss='row'>       
+        <div class='col-xs-12 col-sm-3'>   
+          <h4 class="text-center">Teachers</h4>
+          <p class="text-center">
+         <%= link_to 'Teach A Course', new_instructor_course_path %>
+                <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </p>
+       </div>
+       <div class='col-xs-12 col-sm-3'>   
+          <h4 class="text-center">About</h4>
+          <p class="text-center">
+            <%= link_to 'Team', '#' %>
+            <br />
+            <%= link_to 'Careers', '#' %>
+            <br />
+            <%= link_to 'Privacy Policy', privacy_path %>
+          </p>
+       </div>
+       <div class='col-xs-12 col-sm-3'>   
+          <h4 class="text-center">Contact</h4>
+      <p class="text-center">
+        <%= image_tag 'icons-sm-email.png' %>
+      </p>
+       </div>
+       <div class='col-xs-12 col-sm-3'>   
+          <h4 class="text-center">Social</h4>
+      <p class="text-center">
+        <%= image_tag 'icons-sm-github.png' %>
 
-      <%= link_to 'Teach A Course', new_instructor_course_path %>
+        <%= image_tag 'icons-sm-fb.png' %>
+
+        <%= image_tag 'icons-sm-twitter.png' %>
+        </p>
+       </div>
+     </div>
     </div>
   </div>
 
