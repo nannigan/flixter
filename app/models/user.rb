@@ -12,12 +12,15 @@ class User < ActiveRecord::Base
    def enrolled_in?(course)
     enrolled_courses = enrollments.collect do |enrollment|
         enrollment.course
-    end
-
-   	#     enrolled_courses = []
-    # enrollments.each do |enrollment|
-    #   enrolled_courses << enrollment.course#shorthand for push?
-    # end
+     end
     return enrolled_courses.include?(course)
-   end      
+   end  
+
+   def  make_stripe_customer(stripe_token)
+       Stripe::Customer.create(
+      :email => self.email,
+      :card  => stripe_token
+    )
+   end 
+
 end
